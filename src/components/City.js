@@ -1,5 +1,5 @@
 import React from "react";
-import Town from "./town";
+import Town from "./Town";
 
 export default function City(props) {
   const [townIndex, setTownIndex] = React.useState(props.index);
