@@ -1,5 +1,6 @@
 import React, { Component, useState } from "react";
 import "./../styles/App.css";
+import State from "./State";
 
 // Do not alter the states const and values inside it.
 const states = [
@@ -155,34 +156,11 @@ const states = [
 ];
 
 function App() {
-  const [sName, setSNAme] = useState(false);
-
-  const handleStateClick = (index) => {
-    console.log(index);
-    setSNAme(true);
-  };
-
   return (
     <div id="main">
-      {states.map((data,index) => {
-        return (
-          <>
-          <h2 id={`state${index+1}`} onClick={handleStateClick} value={data.index}>
-            {data.name}
-          </h2>
- {/* <h3>
-   {data.cities.map((c,index)=>{
-     return <h3 id={`city${index+1}`}>{c.name}</h3>
-   })}
- </h3> */}
-
- 
-          </>
-        );
-      })}
+      <State states={states} />
     </div>
   );
 }
-
 
 export default App;
